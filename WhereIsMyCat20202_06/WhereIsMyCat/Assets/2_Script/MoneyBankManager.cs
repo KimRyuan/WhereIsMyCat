@@ -6,24 +6,26 @@ public class MoneyBankManager : MonoBehaviour
 {
     private int catLoveAmount;
     private int catStarAmount;
+
+    #region 싱글톤 패턴 instance
     private static MoneyBankManager instance;
 
     public static MoneyBankManager Instance
     {
+        
         get
         {
-            if (Instance == null)
+            if (instance == null)
             {
                 var obj = FindObjectOfType<MoneyBankManager>();
                 if (obj != null)
                 {
                     instance = obj;
-                    Destroy(obj);
                 }
                 else
                 {
-                    ///var newMoneyBankManager = new GameObject("MoneyBankManager").AddComponent<MoneyBankManager>();
-                    instance = new MoneyBankManager();
+                    var newSingleton = new GameObject("MoneyBankManager").AddComponent<MoneyBankManager>();
+                    instance = newSingleton;
                 }
             }
             return instance;
@@ -34,22 +36,58 @@ public class MoneyBankManager : MonoBehaviour
         }
     }
 
-    private void Awake()    
+
+
+    private void Awake()
     {
         MoneyDataLoad();
+        var objs = FindObjectsOfType<MoneyBankManager>();
+        if (objs.Length != 1)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        //DontDestroyOnLoad(gameObject);
     }
+    
+    //public static MoneyBankManager Instance
+    //{
+    //    get
+    //    {
+    //        if (instance == null)
+    //        {
+    //            instance = new MoneyBankManager();
+    //        }
+    //        else
+    //        {
+    //            instance = (MoneyBankManager)FindObjectOfType(typeof(MoneyBankManager));
+    //        }
+    //        return instance;
+    //    }
+    //    private set
+    //    {
+    //        instance = value;
+    //    }
+    //}
+    #endregion
+
+    #region Start
 
     private void Start()
     {
-        
+
     }
+    #endregion
+
+    #region 냥사랑과 냥스타 +- 하는 곳
 
     //냥사랑 +- 하는곳
     public bool PlusCatLove(int plusLove)
     {
         if (plusLove >= 0)
         {
-            catLoveAmount += plusLove;
+            catLoveAmount = catLoveAmount + plusLove;
+            print(plusLove + "하트 획득!\n현재 하트:" + catLoveAmount);
             return true;
         }
         else
@@ -57,13 +95,12 @@ public class MoneyBankManager : MonoBehaviour
             //들어온 돈이 -라고?? 오류닥!!!!!!!!!!!!!!!!
             return false;
         }
-
     }
     public bool MinusCatLove(int minusLove)
     {
         if ((catLoveAmount >= minusLove) && (minusLove >= 0))
         {
-            catLoveAmount += minusLove;
+            catLoveAmount -= minusLove;
             return true;
         }
         else
@@ -78,6 +115,7 @@ public class MoneyBankManager : MonoBehaviour
         if (plusStar >= 0)
         {
             catStarAmount += plusStar;
+            print(plusStar + "별 획득!\n현재 별:" + catStarAmount);
             return true;
         }
         else
@@ -88,9 +126,9 @@ public class MoneyBankManager : MonoBehaviour
     }
     public bool MinusCatStar(int minusStar)
     {
-        if ((catStarAmount >= minusStar)&&(minusStar>=0))
+        if ((catStarAmount >= minusStar) && (minusStar >= 0))
         {
-            catStarAmount += minusStar;
+            catStarAmount -= minusStar;
             return true;
         }
         else
@@ -99,6 +137,7 @@ public class MoneyBankManager : MonoBehaviour
             return false;
         }
     }
+    #endregion
 
     #region DataLoadSave
 
