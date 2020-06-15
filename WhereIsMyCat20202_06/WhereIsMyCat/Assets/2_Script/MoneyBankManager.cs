@@ -47,7 +47,7 @@ public class MoneyBankManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-        //DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject);
     }
     
     //public static MoneyBankManager Instance
