@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class NormalCatScript : MonoBehaviour
 {
+    public int normalCatCode = 0;    //어느 일반 냥이인지 확인하는 넘버코드. (코드는 고양이 문서 참조)
     private bool nowClickProcessWorking = false;
     public List<Sprite> catImages = new List<Sprite>();
-    private int normalCatMoneyAmount;
+    private int normalCatLoveAmount;
 
     private void Awake()
     {
         SpriteRenderer normalCatSpriteRenderer = GetComponent<SpriteRenderer>();
-        normalCatSpriteRenderer.color = new Color(0, 0, 0, 0); //이미지 바꾸는 동안 숨김
-        NormalCat_FirstSetting();
+        normalCatSpriteRenderer.color = new Color(0, 0, 0, 0); //Code가 입력되기 전까지는 숨김.
     }
 
     void Start()
@@ -20,14 +20,14 @@ public class NormalCatScript : MonoBehaviour
         ClickNormalCatAndGet();
     }
 
-    void NormalCat_FirstSetting()
+    public void NormalCatSpawnWithCode(int spawnCode)
     {
-        int normalCatImageNumber = Random.Range(0, 10);     //0~9 (일반냥이 10마리임)
+        normalCatLoveAmount = Random.Range(6, 10) * 10;       // 60하트~90하트. (업그레이드로 돈 획득량 증가?)
+
+        normalCatCode = spawnCode;
         SpriteRenderer normalCatSpriteRenderer = GetComponent<SpriteRenderer>();
-        normalCatSpriteRenderer.sprite = catImages[normalCatImageNumber];
+        normalCatSpriteRenderer.sprite = catImages[normalCatCode];
         normalCatSpriteRenderer.color = new Color(1, 1, 1, 1);
-        normalCatMoneyAmount = Random.Range(6, 10) * 10;       // 60하트~90하트. (업그레이드로 돈 획득량 증가?)
-                                                               //스테이지에 따라서 증가??<<그러면 첫번째 스테이지 가기싫어질듯)
     }
 
     void ClickNormalCatAndGet()
@@ -35,18 +35,18 @@ public class NormalCatScript : MonoBehaviour
         if (nowClickProcessWorking == false)
         {
             nowClickProcessWorking = true;
-            bool result = MoneyBankManager.Instance.PlusCatLove(normalCatMoneyAmount);
+            bool result = MoneyBankManager.Instance.PlusCatLove(normalCatLoveAmount);
 
 
             if (result)
             {
-                print(normalCatMoneyAmount + "하트 획득 성공함");
+                print(normalCatLoveAmount + "하트 획득 성공함");
                 //반짝하면서 사라짐.
                 //StartCoroutine(CatBecomeDisappear());
             }
             else
             {
-                print(normalCatMoneyAmount + "하트 획득 실패함★★★★");
+                print(normalCatLoveAmount + "하트 획득 실패함★★★★");
             }
         }
     }

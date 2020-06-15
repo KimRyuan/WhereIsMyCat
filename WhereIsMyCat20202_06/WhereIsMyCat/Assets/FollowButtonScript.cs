@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FollowMouse : MonoBehaviour
+public class FollowButtonScript : MonoBehaviour
 {
     bool spriteMaskFollow = false;
     public Camera mainCamera;
@@ -18,22 +18,11 @@ public class FollowMouse : MonoBehaviour
     {
         while (spriteMaskFollow)
         {
-            //print("시작되고 있는지 확인");
+            print("시작되고 있는지 확인");
             Vector3 target = Input.mousePosition;
             target += new Vector3(0, 0, 1);
-            transform.position = mainCamera.ScreenToWorldPoint(target) + new Vector3(-1f, 0, 0);
+            GetComponent<RectTransform>().anchoredPosition = mainCamera.ScreenToWorldPoint(target);
             yield return new WaitForSecondsRealtime(0.1f);
         }
     }
-
-    //private void OnMouseDown()
-    //{
-    //    spriteMaskFollow = true;
-    //    StartCoroutine(GoToMouse());
-    //}
-
-    //private void OnMouseUp()
-    //{
-    //    spriteMaskFollow = false;
-    //}
 }
