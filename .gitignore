@@ -3,7 +3,8 @@
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore 
 # 
 Library/
-[Tt]emp/ 
+Debug/
+/[Tt]emp/ 
 obj/ 
 /[Bb]uild/ 
 /[Bb]uilds/ 
