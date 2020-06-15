@@ -4,10 +4,10 @@
 # 
 Library/
 [Tt]emp/ 
-/[Oo]bj/ 
+obj/ 
 /[Bb]uild/ 
 /[Bb]uilds/ 
-/[Ll]ogs/ 
+Logs/ 
 /[Uu]ser[Ss]ettings/ 
 
  
