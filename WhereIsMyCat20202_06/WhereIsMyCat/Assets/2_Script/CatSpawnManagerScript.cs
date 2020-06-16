@@ -14,6 +14,7 @@ public class CatSpawnManagerScript : MonoBehaviour
     float catSpawnTime = 1.0f;
 
     public GameObject normalCatObject;  //일반 냥이 오브젝트
+    public List<GameObject> normalCatLocationPointList;
     public GameObject specialCatObject; //스페셜 냥이 오브젝트
     public List<GameObject> specialCatLocationList = new List<GameObject>();        //스페셜 냥이 고정 스폰 위치(번호순 정렬)
 
@@ -21,7 +22,6 @@ public class CatSpawnManagerScript : MonoBehaviour
 
 
 
-    public List<GameObject> spawnPointList;
     void Start()
     {
         LoadCats(); //전에 있던 고양이 로딩
@@ -75,9 +75,9 @@ public class CatSpawnManagerScript : MonoBehaviour
         }
         else
         {   //스페셜냥이 현재 Chapter와 Level에 따라 다름.
+            int[] minMax = GameManager.Instance.CatSpawnInfos_Dictionary[chapter][level].catCodeMinMax;
             //C1 L1 10~19.
             //C1 L2 20~30.
-            int[] minMax = GameManager.Instance.CatSpawnInfos_Dictionary[chapter][level].catCodeMinMax;
             int specialCatCode = Random.Range(minMax[0], minMax[1] + 1);
 
             //이미 소환 되어있는지 체크
@@ -114,8 +114,8 @@ public class CatSpawnManagerScript : MonoBehaviour
         //챕터마다 spawnPointList를 따로따로 넣어줘야한다...
         //일반냥이는 각각의 Level 화면 안에서 소환된다.. 포인트는[레벨*2-2, 레벨*2-1]가져오면 댐
 
-        Vector2 postion1 = spawnPointList[nowLevel * 2 - 2].transform.position;
-        Vector2 postion2 = spawnPointList[nowLevel * 2 - 1].transform.position;
+        Vector2 postion1 = normalCatLocationPointList[nowLevel * 2 - 2].transform.position;
+        Vector2 postion2 = normalCatLocationPointList[nowLevel * 2 - 1].transform.position;
 
         //야이씨 여기 뭐 있는 것 강틑 ㅁㄹㄴㅁㄹㅇㅁ즐ㅈ므랒이므리ㅏㅈ므라므맂므랃즈미훚멀두지말드짐릗ㅈ★
         GameObject nowCat = Instantiate(normalCatObject);

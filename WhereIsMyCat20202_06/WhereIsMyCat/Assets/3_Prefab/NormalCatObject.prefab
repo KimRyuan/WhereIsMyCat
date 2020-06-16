@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3010180418410137923}
   - component: {fileID: 3010180418410137920}
-  - component: {fileID: 3010180418410137921}
   - component: {fileID: 3010180418410137950}
+  - component: {fileID: 7930182438610619431}
   m_Layer: 0
   m_Name: NormalCatObject
   m_TagString: Untagged
@@ -84,22 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &3010180418410137921
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3010180418410137951}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.595
 --- !u!114 &3010180418410137950
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,6 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 639b22698f7f0ac49884dd717c277159, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normalCatCode: 0
   catImages:
   - {fileID: -7548846596989279706, guid: 633df60cbcaeca44c8ee967729350f4b, type: 3}
   - {fileID: -938663150154945359, guid: 633df60cbcaeca44c8ee967729350f4b, type: 3}
@@ -123,3 +108,49 @@ MonoBehaviour:
   - {fileID: 3915277026526237025, guid: 633df60cbcaeca44c8ee967729350f4b, type: 3}
   - {fileID: -8019578351754044682, guid: 633df60cbcaeca44c8ee967729350f4b, type: 3}
   - {fileID: -8369469223862286955, guid: 633df60cbcaeca44c8ee967729350f4b, type: 3}
+--- !u!60 &7930182438610619431
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3010180418410137951}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.0704066, y: 1.19}
+    newSize: {x: 1.0704066, y: 1.19}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.54210037, y: -0.07223822}
+      - {x: 0.46687648, y: -0.018506879}
+      - {x: 0.3486675, y: -0.007760611}
+      - {x: 0.327175, y: 0.17492595}
+      - {x: 0.2519511, y: 0.42209014}
+      - {x: 0.112249605, y: 0.58328414}
+      - {x: 0.037025727, y: 0.5725379}
+      - {x: -0.04894442, y: 0.45432892}
+      - {x: -0.081183225, y: 0.38985133}
+      - {x: -0.2961086, y: 0.59403044}
+      - {x: -0.38207874, y: 0.59403044}
+      - {x: -0.4680489, y: 0.4650752}
+      - {x: -0.5002877, y: 0.27164236}
+      - {x: -0.52178025, y: -0.115223296}
+      - {x: -0.52178025, y: -0.3516412}
+      - {x: -0.5002877, y: -0.42686507}
+      - {x: -0.30685487, y: -0.5773128}
+      - {x: 0.0800108, y: -0.5773128}
+      - {x: 0.30568245, y: -0.46985015}
+      - {x: 0.4991153, y: -0.30865613}
+      - {x: 0.54210037, y: -0.2119397}
