@@ -32,8 +32,7 @@ SpriteAtlas:
     packables:
     - {fileID: 102900000, guid: fecdf68a658a7b1459bb76620b05db27, type: 3}
     - {fileID: 102900000, guid: fad041430b0a0684686b030e882936b9, type: 3}
-    - {fileID: 102900000, guid: 14f19db1d12c1364eb35f1d850a13cc7, type: 3}
-    totalSpriteSurfaceArea: 697165
+    totalSpriteSurfaceArea: 648159
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
@@ -69,12 +68,6 @@ SpriteAtlas:
   - {fileID: 7319829036119299154, guid: 2e588ca6a71720f46a2de614ac43413a, type: 3}
   - {fileID: -5790719290395572807, guid: 2e588ca6a71720f46a2de614ac43413a, type: 3}
   - {fileID: -1215474226491948769, guid: 2e588ca6a71720f46a2de614ac43413a, type: 3}
-  - {fileID: -5752046982879516091, guid: 633df60cbcaeca44c8ee967729350f4b, type: 3}
-  - {fileID: -1907654777556537598, guid: 633df60cbcaeca44c8ee967729350f4b, type: 3}
-  - {fileID: -4441900308924493142, guid: 633df60cbcaeca44c8ee967729350f4b, type: 3}
-  - {fileID: -3822775872940728650, guid: 633df60cbcaeca44c8ee967729350f4b, type: 3}
-  - {fileID: -1854172622137133299, guid: 633df60cbcaeca44c8ee967729350f4b, type: 3}
-  - {fileID: 8119159365409263911, guid: 633df60cbcaeca44c8ee967729350f4b, type: 3}
   m_PackedSpriteNamesToIndex:
   - Cat_31
   - Cat_30
@@ -108,11 +101,5 @@ SpriteAtlas:
   - Cat_5
   - Cat_6
   - Cat_7
-  - Icon0
-  - Icon1
-  - Icon2
-  - Icon3
-  - Icon4
-  - Icon5
   m_Tag: SpriteAtlas
   m_IsVariant: 0

@@ -17,10 +17,14 @@ public class CollectionSceneScript : MonoBehaviour
 
     public void CollectionBoard(int index)
     {
-        catNameText.text = collectionInfoListScript.collectionInfoList[index].catName;
-        catDescriptionText.text = collectionInfoListScript.collectionInfoList[index].catDescription;
-        //이미지 설정
-        catImage.sprite = SpriteSheetManager.GetSpriteByName("SpriteAtlas", "Cat_" + collectionInfoListScript.collectionInfoList[index].catCode.ToString());
+        if (collectionInfoListScript.collectionInfoList[index].isCollected)
+        {
+            catNameText.text = collectionInfoListScript.collectionInfoList[index].catName;
+            catDescriptionText.text = collectionInfoListScript.collectionInfoList[index].catDescription;
+            //이미지 설정
+            catImage.sprite = SpriteSheetManager.GetSpriteByName("UIAtlas", "Cat" + collectionInfoListScript.collectionInfoList[index].catCode.ToString());
+            collection.SetActive(true);
+        }
     }
 
     public void CollectionScrollViewSetting()
@@ -29,22 +33,26 @@ public class CollectionSceneScript : MonoBehaviour
         Debug.Log("count : " + collectionInfoListScript.collectionInfoList.Count);
         for (int i = 0; i < collectionInfoListScript.collectionInfoList.Count; i++)
         {
-            scrollViewImage[i].sprite = SpriteSheetManager.GetSpriteByName("SpriteAtlas", "Cat_" + collectionInfoListScript.collectionInfoList[i].catCode.ToString());
-            if (collectionInfoListScript.collectionInfoList[i].isCollected.Equals(false))
+            scrollViewImage[i].sprite = SpriteSheetManager.GetSpriteByName("UIAtlas", "Cat" + collectionInfoListScript.collectionInfoList[i].catCode.ToString());
+            scrollViewImage[i].transform.parent.gameObject.SetActive(true);
+
+            if (collectionInfoListScript.collectionInfoList[i].isCollected)
+            {
+                scrollViewImage[i].color = Color.white;
+            }
+            else
             {
                 scrollViewImage[i].color = Color.black;
+            }
+
+            for (int j = collectionInfoListScript.collectionInfoList.Count; j < scrollViewImage.Length; j++)
+            {
+                scrollViewImage[j].transform.parent.gameObject.SetActive(false);
             }
         }
     }
 
-    public void CatCollected(int catCode)
-    {
-        collection.SetActive(true);
-        collectionInfoListScript.collectionInfoList[catCode].isCollected = true;
-        //이미지 변경
-        scrollViewImage[catCode].color = Color.white;
 
-    }
 
 
     public void BackButton()
@@ -54,7 +62,6 @@ public class CollectionSceneScript : MonoBehaviour
 
     private void Start()
     {
-        SpriteSheetManager.Load("SpriteAtlas");
         CollectionScrollViewSetting();
     }
 

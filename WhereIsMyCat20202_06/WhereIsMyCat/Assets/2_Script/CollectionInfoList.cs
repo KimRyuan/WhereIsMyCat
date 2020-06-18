@@ -26,7 +26,7 @@ public class CollectionInfoList : MonoBehaviour
     void CollectionInfoListSettnig()
     {
         //0~9 : 일반 냥이 10~19 : C1L1 20~30 C1L2
-        collectionInfoList.Add(new CollectionInfo(0, "윙크냥이", "당신을 보고 윙크를 합니다! 매력적이군요.", false));
+        collectionInfoList.Add(new CollectionInfo(0, "윙크냥이", "당신을 보고 윙크를 합니다! 매력적이군요.", true));
         collectionInfoList.Add(new CollectionInfo(1, "산책냥이", "산책을 하고 있는 산책냥이입니다. 혼자서도 길을 잃지 않습니다.", false));
         collectionInfoList.Add(new CollectionInfo(2, "나는냥이", "날개를 활짝펴고~ 세상을 자유롭게 날거야~! 노래하며 춤추는~ 나는 아름다운 냥이↗↗↗!!!!!!", false));
         collectionInfoList.Add(new CollectionInfo(3, "저기봐냥이", "저기에 뭔가 있다고 가르키고 있습니다. 옛부터 동물들은 귀신을 본다는데.. 혹시…?", false));
