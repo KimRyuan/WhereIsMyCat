@@ -10,9 +10,13 @@ public class CollectionSceneScript : MonoBehaviour
     public Image catImage;
     public Image[] scrollViewImage;
     public CollectionInfoList collectionInfoListScript;
-    public GameObject collection;
+    public Canvas collection;
+    public GameObject collectionDetail;
 
-
+    private void Awake()
+    {
+        SpriteSheetManager.Load("UIAtlas");
+    }
 
 
     public void CollectionBoard(int index)
@@ -23,7 +27,7 @@ public class CollectionSceneScript : MonoBehaviour
             catDescriptionText.text = collectionInfoListScript.collectionInfoList[index].catDescription;
             //이미지 설정
             catImage.sprite = SpriteSheetManager.GetSpriteByName("UIAtlas", "Cat" + collectionInfoListScript.collectionInfoList[index].catCode.ToString());
-            collection.SetActive(true);
+            collectionDetail.SetActive(true);
         }
     }
 
@@ -55,9 +59,14 @@ public class CollectionSceneScript : MonoBehaviour
 
 
 
-    public void BackButton()
+    public void CollectionBackButton()
     {
-        collection.SetActive(false);
+        collection.enabled = false;
+    }
+
+    public void CollectionDetailBackButton()
+    {
+        collectionDetail.SetActive(false);
     }
 
     private void Start()
