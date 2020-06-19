@@ -10,8 +10,10 @@ public class CollectionSceneScript : MonoBehaviour
     public Image catImage;
     public Image[] scrollViewImage;
     public CollectionInfoList collectionInfoListScript;
+
     public Canvas collection;
     public GameObject collectionDetail;
+
 
     private void Awake()
     {

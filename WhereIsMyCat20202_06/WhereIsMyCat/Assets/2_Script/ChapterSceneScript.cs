@@ -23,6 +23,7 @@ public class ChapterSceneScript : MonoBehaviour
         SpriteSheetManager.Load("UIAtlas");
     }
 
+
     public void ChapterNextButton()
     {
         if (posisi < pos.Length - 1)
@@ -104,33 +105,33 @@ public class ChapterSceneScript : MonoBehaviour
     public void StageButtonSetting()
     {
         int btnCount = 0;
+
         chapterIndex = posisi + 1;
 
         btnCount = GameManager.Instance.CatSpawnInfos_Dictionary[chapterIndex].Count;
         chapterNameImage.sprite = SpriteSheetManager.GetSpriteByName("UIAtlas", "Chatper" + chapterIndex.ToString() + "_ThemeSelect_0"); //Chatper1_ThemeSelect Chatper2_ThemeSelect
+
 
         for (int i = 0; i < ChapterStageBtn.Length; i++)
         {
             if (i < btnCount)
             {
                 ChapterStageBtn[i].SetActive(true);
+
                 ChapterStageBtn[i].transform.GetChild(1).GetComponent<Text>().text = GameManager.Instance.CatSpawnInfos_Dictionary[chapterIndex][i + 1].levelName;
                 ChapterStageBtn[i].GetComponent<Image>().sprite = SpriteSheetManager.GetSpriteByName("UIAtlas", "Chatper" + chapterIndex.ToString() + "_Button_" + i);
+
             }
             else
                 ChapterStageBtn[i].SetActive(false);
         }
     }
 
+
     public void LoadChapterLevel(int index)
     {
       
     }
 
-    public void LoadChapterScene()
-    {
-
-    }
     #endregion
-
 }

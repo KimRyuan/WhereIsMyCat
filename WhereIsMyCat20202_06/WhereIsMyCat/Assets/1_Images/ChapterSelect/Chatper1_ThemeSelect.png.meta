@@ -80,6 +80,9 @@ TextureImporter:
   - first:
       213: -2904482887021040385
     second: Chatper1_ThemeSelect_25
+  - first:
+      213: 2877471580529523173
+    second: 
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -177,295 +180,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Chatper1_ThemeSelect_0
+      name: 
       rect:
         serializedVersion: 2
-        x: 700
-        y: 930
-        width: 480
-        height: 125
+        x: 0
+        y: 0
+        width: 0
+        height: 0
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 100000, y: 100000}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: d6d0c0f5f7e0c7640800000000000000
-      internalID: 5078950419985337709
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Chatper1_ThemeSelect_1
-      rect:
-        serializedVersion: 2
-        x: 1761
-        y: 930
-        width: 115
-        height: 115
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9a328059b8fc937e0800000000000000
-      internalID: -1785167578867948631
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Chatper1_ThemeSelect_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 466
-        width: 85
-        height: 144
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6d624a81e8600c680800000000000000
-      internalID: -8736976069730228522
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Chatper1_ThemeSelect_3
-      rect:
-        serializedVersion: 2
-        x: 671
-        y: 228
-        width: 586
-        height: 640
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 336c8119411af3c50800000000000000
-      internalID: 6647208684727879219
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Chatper1_ThemeSelect_4
-      rect:
-        serializedVersion: 2
-        x: 1771
-        y: 466
-        width: 85
-        height: 144
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c6d0e243e849adbb0800000000000000
-      internalID: -4910449105212404372
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Chatper1_ThemeSelect_5
-      rect:
-        serializedVersion: 2
-        x: 242
-        y: 304
-        width: 161
-        height: 148
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 750411f79d28e3830800000000000000
-      internalID: 4052820585331376215
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Chatper1_ThemeSelect_6
-      rect:
-        serializedVersion: 2
-        x: 419
-        y: 304
-        width: 161
-        height: 148
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9a4cfee527f052b70800000000000000
-      internalID: 8873515624696890537
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Chatper1_ThemeSelect_7
-      rect:
-        serializedVersion: 2
-        x: 163
-        y: 44
-        width: 74
-        height: 88
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: efb116a30b5107b60800000000000000
-      internalID: 7741711606087752702
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Chatper1_Button_0
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 58
-        width: 144
-        height: 144
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fe87dfee4da2746f0800000000000000
-      internalID: -700544123001800465
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Chatper1_Button_1
-      rect:
-        serializedVersion: 2
-        x: 546
-        y: 58
-        width: 144
-        height: 144
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4a40daa34821a0b30800000000000000
-      internalID: 4254233157134255268
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Chatper1_Button_2
-      rect:
-        serializedVersion: 2
-        x: 763
-        y: 58
-        width: 144
-        height: 144
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 86c61ef5bf7b12f80800000000000000
-      internalID: -8133017161781121944
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Chatper1_Button_3
-      rect:
-        serializedVersion: 2
-        x: 1013
-        y: 58
-        width: 144
-        height: 144
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 02eab8c6e9379fed0800000000000000
-      internalID: -2379743803825476064
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Chatper1_Button_4
-      rect:
-        serializedVersion: 2
-        x: 1230
-        y: 58
-        width: 144
-        height: 144
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cb65bce74cb7c7e60800000000000000
-      internalID: 7961374325155255996
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Chatper1_Button_5
-      rect:
-        serializedVersion: 2
-        x: 1456
-        y: 58
-        width: 144
-        height: 144
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d0af0805e3270d860800000000000000
-      internalID: 7552662187064490509
+      spriteID: 5e97eb03825dee720800000000000000
+      internalID: 2877471580529523173
       vertices: []
       indices: 
       edges: []
@@ -473,7 +203,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
