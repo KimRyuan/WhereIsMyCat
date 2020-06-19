@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class MoneyBankManager : MonoBehaviour
 {
-    public int catLoveAmount { get; private set; }
-    public int catStarAmount { get; private set; }
+    private int catLoveAmount;
+    private int catStarAmount;
 
     #region 싱글톤 패턴 instance
     private static MoneyBankManager instance;
