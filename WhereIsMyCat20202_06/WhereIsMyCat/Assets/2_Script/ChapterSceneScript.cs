@@ -10,12 +10,18 @@ public class ChapterSceneScript : MonoBehaviour
     public GameObject scrollbar;
     public List<GameObject> ChapterImage;
     float scroll_pos = 0;
-    float[] pos;
+    [SerializeField] float[] pos;
     [SerializeField] int posisi = 0;
 
-
-
+    public Image chapterNameImage;
     public GameObject[] ChapterStageBtn;
+    public Canvas CollectionCanvas;
+
+    int chapterIndex = 0;
+    private void Awake()
+    {
+        SpriteSheetManager.Load("UIAtlas");
+    }
 
     public void ChapterNextButton()
     {
@@ -27,6 +33,7 @@ public class ChapterSceneScript : MonoBehaviour
         // ChapterImageCopy();
     }
 
+
     public void ChapterPrevButton()
     {
         if (posisi > 0)
@@ -37,6 +44,7 @@ public class ChapterSceneScript : MonoBehaviour
         }
         // ChapterImageCopy();
     }
+
     private void Update()
     {
         pos = new float[transform.childCount];
@@ -96,34 +104,33 @@ public class ChapterSceneScript : MonoBehaviour
     public void StageButtonSetting()
     {
         int btnCount = 0;
+        chapterIndex = posisi + 1;
 
-        switch (posisi)
-        {
-            case 0:
-                btnCount = 6;
-                break;
-            case 1:
-                btnCount = 4;
-                break;
-
-
-                //ChapterStageBtn
-        }
+        btnCount = GameManager.Instance.CatSpawnInfos_Dictionary[chapterIndex].Count;
+        chapterNameImage.sprite = SpriteSheetManager.GetSpriteByName("UIAtlas", "Chatper" + chapterIndex.ToString() + "_ThemeSelect_0"); //Chatper1_ThemeSelect Chatper2_ThemeSelect
 
         for (int i = 0; i < ChapterStageBtn.Length; i++)
         {
-            if (i <= btnCount)
+            if (i < btnCount)
+            {
                 ChapterStageBtn[i].SetActive(true);
+                ChapterStageBtn[i].transform.GetChild(1).GetComponent<Text>().text = GameManager.Instance.CatSpawnInfos_Dictionary[chapterIndex][i + 1].levelName;
+                ChapterStageBtn[i].GetComponent<Image>().sprite = SpriteSheetManager.GetSpriteByName("UIAtlas", "Chatper" + chapterIndex.ToString() + "_Button_" + i);
+            }
             else
                 ChapterStageBtn[i].SetActive(false);
         }
+    }
 
+    public void LoadChapterLevel(int index)
+    {
+      
+    }
+
+    public void LoadChapterScene()
+    {
 
     }
     #endregion
 
-    #region 챕터 텍스트 이미지 설정
-
-
-    #endregion
 }
