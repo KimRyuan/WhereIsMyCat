@@ -12,7 +12,10 @@ public class CollectionSceneScript : MonoBehaviour
     public CollectionInfoList collectionInfoListScript;
     public GameObject collection;
 
-
+    private void Awake()
+    {
+        SpriteSheetManager.Load("UIAtlas");
+    }
 
 
     public void CollectionBoard(int index)

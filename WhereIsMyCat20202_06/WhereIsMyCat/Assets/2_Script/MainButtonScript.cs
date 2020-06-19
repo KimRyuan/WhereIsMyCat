@@ -34,9 +34,9 @@ public class MainButtonScript : MonoBehaviour
         helpPanel.SetActive(true);
     }
 
-    public void PanelBackButtonClick()
+    public void HelplBackButtonClick()
     {
-        gameObject.SetActive(false);
+        helpPanel.SetActive(false);
     }
 
 }
