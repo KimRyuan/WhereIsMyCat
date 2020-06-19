@@ -141,6 +141,10 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        //해상도 설정
+        Screen.SetResolution(1920, 1080, true);
+
+
         //싱글톤 작업
         //MoneyDataLoad();
         var objs = FindObjectsOfType<GameManager>();
