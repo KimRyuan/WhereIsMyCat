@@ -33,7 +33,7 @@ SpriteAtlas:
     - {fileID: 102900000, guid: 66eae72cc8d92b640b7eee38b2edf06b, type: 3}
     - {fileID: 102900000, guid: 14f19db1d12c1364eb35f1d850a13cc7, type: 3}
     - {fileID: 102900000, guid: 784ca2bbd0d5fd2409cac509a0898880, type: 3}
-    totalSpriteSurfaceArea: 5616490
+    totalSpriteSurfaceArea: 5631000
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
@@ -69,6 +69,8 @@ SpriteAtlas:
   - {fileID: 8119159365409263911, guid: 633df60cbcaeca44c8ee967729350f4b, type: 3}
   - {fileID: 21300000, guid: d7789e6c0d682cf4f91abb589036c91a, type: 3}
   - {fileID: 21300000, guid: 623b60dc02ae565459ad2f4a56beb86d, type: 3}
+  - {fileID: 6672790543693851436, guid: 8247e4ec51d2cab4b8413cb0ec64e101, type: 3}
+  - {fileID: 829481202538447507, guid: 8247e4ec51d2cab4b8413cb0ec64e101, type: 3}
   - {fileID: 21300000, guid: cd901d1d8167ed045b65e24dbd9fc1ff, type: 3}
   - {fileID: 21300000, guid: eed3a37d3c51d944aa6cb9f469f077eb, type: 3}
   - {fileID: 1453414300521356700, guid: d752e9fd64d24d748a692f0afe8df92c, type: 3}
@@ -122,6 +124,8 @@ SpriteAtlas:
   - Icon5
   - Cat30
   - Cat12
+  - MouseIcon_0
+  - MouseIcon_1
   - Cat3
   - Cat29
   - SettingImages_20
