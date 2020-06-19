@@ -71,8 +71,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
-  m_Sprite: {fileID: -7548846596989279706, guid: 633df60cbcaeca44c8ee967729350f4b,
+  m_SortingOrder: 10
+  m_Sprite: {fileID: -7232521027535748977, guid: 2e588ca6a71720f46a2de614ac43413a,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -97,17 +97,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   normalCatCode: 0
-  catImages:
-  - {fileID: -7548846596989279706, guid: 633df60cbcaeca44c8ee967729350f4b, type: 3}
-  - {fileID: -938663150154945359, guid: 633df60cbcaeca44c8ee967729350f4b, type: 3}
-  - {fileID: 3405470806338669514, guid: 633df60cbcaeca44c8ee967729350f4b, type: 3}
-  - {fileID: 540655299058023401, guid: 633df60cbcaeca44c8ee967729350f4b, type: 3}
-  - {fileID: 6838868483709728035, guid: 633df60cbcaeca44c8ee967729350f4b, type: 3}
-  - {fileID: -2195002134010966896, guid: 633df60cbcaeca44c8ee967729350f4b, type: 3}
-  - {fileID: 8289771192795360266, guid: 633df60cbcaeca44c8ee967729350f4b, type: 3}
-  - {fileID: 3915277026526237025, guid: 633df60cbcaeca44c8ee967729350f4b, type: 3}
-  - {fileID: -8019578351754044682, guid: 633df60cbcaeca44c8ee967729350f4b, type: 3}
-  - {fileID: -8369469223862286955, guid: 633df60cbcaeca44c8ee967729350f4b, type: 3}
 --- !u!60 &7930182438610619431
 PolygonCollider2D:
   m_ObjectHideFlags: 0

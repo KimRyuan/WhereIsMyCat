@@ -72,7 +72,7 @@ public class GameManager : MonoBehaviour
             instance = value;
         }
     }
-    
+
     #endregion
 
 
@@ -80,7 +80,7 @@ public class GameManager : MonoBehaviour
 
     /*Chapter,Level*/
     public Dictionary<int, Dictionary<int, ChapterLevelCatsInfo>> CatSpawnInfos_Dictionary = new Dictionary<int, Dictionary<int, ChapterLevelCatsInfo>>();
-    
+
 
     void CatSpawnInfoDictionary_Setting()
     {
@@ -93,7 +93,7 @@ public class GameManager : MonoBehaviour
         infoList.Add(new ChapterLevelCatsInfo(0, 0, "일반냥이코드저장용", false, 0,/*~*/ 9, 0, new List<int>()));     //일반냥이 코드를 저장하기 위한 곳임.
 
         //Chapter1
-        infoList.Add(new ChapterLevelCatsInfo(1, 1, "B의 방", true, 10,/*~*/ 19, 7, new List<int> {/*테스트용 일반냥이 소환*/ 0, 1, 2, 3, 4, 5, 6 }));
+        infoList.Add(new ChapterLevelCatsInfo(1, 1, "B의 방", true, 10,/*~*/ 19, 0, new List<int>()));
         infoList.Add(new ChapterLevelCatsInfo(1, 2, "2층 거실", false, 20,/*~*/ 30, 0, new List<int>()));
         infoList.Add(new ChapterLevelCatsInfo(1, 3, "옷방", false, 0,/*~*/ 0, 0, new List<int>()));
         infoList.Add(new ChapterLevelCatsInfo(1, 4, "2층 화장실", false, 0,/*~*/ 0, 0, new List<int>()));
@@ -110,21 +110,30 @@ public class GameManager : MonoBehaviour
         infoList.Add(new ChapterLevelCatsInfo(3, 1, "정원 입구", false, 0,/*~*/ 0, 0, new List<int>()));
         infoList.Add(new ChapterLevelCatsInfo(3, 2, "꽃밭", false, 0,/*~*/ 0, 0, new List<int>()));
         infoList.Add(new ChapterLevelCatsInfo(3, 3, "정원 창고", false, 0,/*~*/ 0, 0, new List<int>()));
+        
 
         Dictionary<int, ChapterLevelCatsInfo> lvDic = new Dictionary<int, ChapterLevelCatsInfo>();
         int putChapter = 0;
-        for (int i = 0; i < infoList.Count; i++)
+        for (int list_Index = 0; list_Index < infoList.Count; list_Index++)
         {
-            if (infoList[i].chapter != putChapter)  //챕터가 바뀔 때 Dic초기화해서 챕터를 구분함.
+            if (infoList[list_Index].chapter != putChapter)  //챕터가 바뀔 때 Dic초기화해서 챕터를 구분함.
             {
-                putChapter++;
+                //0챕터, 1챕터, 2챕터, 3챕터,.. 전부 뭉텅이로 넣어줌
                 CatSpawnInfos_Dictionary.Add(putChapter, lvDic);
                 lvDic = new Dictionary<int, ChapterLevelCatsInfo>();
+                putChapter++;
             }
-            lvDic.Add(infoList[i].level, infoList[i]);
-        }
 
-        infoList.Clear();  //메모리 정리까지 직접하면 좋긴한데 그냥 클리어만 해둠..
+            lvDic.Add(infoList[list_Index].level, infoList[list_Index]);
+
+            if(list_Index == (infoList.Count - 1))
+            {
+                /*마지막 작업*/
+                CatSpawnInfos_Dictionary.Add(putChapter, lvDic);
+                //마지막 챕터 넣었습니다.
+            }
+        }
+        //infoList.Clear();  //메모리 정리까지 직접하면 좋긴한데 그냥 클리어만 해둠..
     }
 
     #endregion
