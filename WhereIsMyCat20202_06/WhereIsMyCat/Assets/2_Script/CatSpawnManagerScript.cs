@@ -8,10 +8,10 @@ public class CatSpawnManagerScript : MonoBehaviour
 
     int nowChapter = 1;
     int nowLevel = 1;
-
-    int nowCatCount;
+    int catMaxCount = 30;
+    
     bool nowSpawnWorking = true;        //만약 총 고양이 갯수가 50마리 이상이거나 할 시에는 스폰 금지? (스테이지 마다 제한?)
-    float catSpawnTime = 1.0f;
+    float catSpawnTime = 0.1f;
 
     public GameObject normalCatObject;  //일반 냥이 오브젝트
     public List<GameObject> normalCatLocationPointList;
@@ -41,7 +41,6 @@ public class CatSpawnManagerScript : MonoBehaviour
     {
         while (nowSpawnWorking == true)
         {
-
             //나중에 새로운 씬 불러오기 할 때 >> (경과된 시간/스폰타임)마리를 바로 스폰하는 것으로 한다.
 
             //챕터&레벨마다 하나씩 공평하게 소환해야한다.★★★★★★
@@ -55,7 +54,14 @@ public class CatSpawnManagerScript : MonoBehaviour
                     {
                         if (GameManager.Instance.CatSpawnInfos_Dictionary[chapter][level].isUnlock)
                         {
-                            CatSpawn_WithChapterLevel(chapter, level);
+                            if (GameManager.Instance.CatSpawnInfos_Dictionary[chapter][level].spawnedCatCodeList.Count < catMaxCount)
+                            {
+                                CatSpawn_WithChapterLevel(chapter, level);
+                            }
+                            else
+                            {
+                                //print("고양이 갯수 초과!");
+                            }
                         }
                     }
                     //레벨끝남
@@ -71,12 +77,12 @@ public class CatSpawnManagerScript : MonoBehaviour
 
     void CatSpawn_WithChapterLevel(int chapter, int level)
     {
-        print("캣스폰에서 입력된 챕터" + chapter + "레벨" + level);
+        //print("캣스폰에서 입력된 챕터" + chapter + "레벨" + level);
         //(일반냥이 확률 80%, 레어냥이 20%(테스트용))
         if (Random.Range(1, 11) <= 8)  //1~10. 1~8은 일반냥이. 9~10 스페셜냥이
         {
             //일반냥이 0~9.
-            NormalCatSpawn();
+            NormalCatSpawn(chapter, level);
         }
         else
         {   //스페셜냥이 현재 Chapter와 Level에 따라 다름.
@@ -98,25 +104,27 @@ public class CatSpawnManagerScript : MonoBehaviour
             //이미 소환된 고양이라면 일반고양이로 바꿈
             if (isAlreadySpawned)
             {
-                print("중복된 스페셜 냥이가 일반냥이로 바뀌었습니다.");
-                NormalCatSpawn();
+                //print("중복된 스페셜 냥이가 일반냥이로 바뀌었습니다." + specialCatCode);
+                NormalCatSpawn(chapter, level);
             }
             else
             {
-                SpecialCatSpawn(specialCatCode);
+                SpecialCatSpawn(chapter, level, specialCatCode);
             }
         }
     }
 
-    void NormalCatSpawn(int spawnCode = -1)
+    void NormalCatSpawn(int chapter, int level, int spawnCode = -1)
     {
+        //print("입력받은 일반냥이" + spawnCode +"-1일시 임의로 설정");
         if (spawnCode == -1)    //지정번호 없을 시 임의로 소환
         {
-            print("C0L0에 있는 기본 냥이들을 가져옵니다.");
             int[] minMax = GameManager.Instance.CatSpawnInfos_Dictionary[0][0].catCodeMinMax;
-            print("C0L0에 있는 기본 냥이들을 가져왔습니다.");
             spawnCode = Random.Range(minMax[0], minMax[1] + 1);
         }
+        //소환 목록에 추가
+        GameManager.Instance.CatSpawnInfos_Dictionary[chapter][level].spawnedCatCodeList.Add(spawnCode);
+        //print("일반냥이 소환" + spawnCode);
 
         //소환
         GameObject nowCat = Instantiate(normalCatObject);
@@ -131,8 +139,10 @@ public class CatSpawnManagerScript : MonoBehaviour
         nowCat.GetComponent<NormalCatScript>().NormalCatSpawnSetting_WithCode(spawnCode);
     }
 
-    void SpecialCatSpawn(int spawnCode)
+    void SpecialCatSpawn(int chapter, int level, int spawnCode)
     {
+        GameManager.Instance.CatSpawnInfos_Dictionary[chapter][level].spawnedCatCodeList.Add(spawnCode);
+        //print("스페셜냥이 소환" + spawnCode);
         //소환
         GameObject nowCat = Instantiate(specialCatObject);
 
@@ -144,11 +154,12 @@ public class CatSpawnManagerScript : MonoBehaviour
             if (token[1].Equals(spawnCode.ToString()))  //token : specialCat_숫자_Location 형식
             {
                 nowCat.transform.position = specialCatLocationList[num].transform.position;
-                print(token[1] + "과" + spawnCode + "가 같습니다.");
+                //print(token[1] + "과" + spawnCode + "가 같습니다.");
+                break;
             }
             else
             {
-                print(token[1] + "과" + spawnCode + "가 다릅니다.");
+                //print(token[1] + "과" + spawnCode + "가 다릅니다.");
             }
         }
 

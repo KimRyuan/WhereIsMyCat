@@ -15,7 +15,7 @@ public class SpecialCatScript : MonoBehaviour
     private void Awake()
     {
         SpriteRenderer specialCatSpriteRenderer = GetComponent<SpriteRenderer>();
-        specialCatSpriteRenderer.color = new Color(0, 0, 0, 0);
+        specialCatSpriteRenderer.color = new Color(1, 1, 1, 0);
         //Code와 위치가 입력되기 전까지 숨김
     }
 
@@ -29,7 +29,7 @@ public class SpecialCatScript : MonoBehaviour
 
         //아틀라스 로드는 CatSpawnManagerScript에서 함.
         normalCatSpriteRenderer.sprite = SpriteSheetManager.GetSpriteByName("SpriteAtlas", "Cat_" + spawnCode);
-        StartCoroutine(CatBecomeDisappear());
+        StartCoroutine(CatBecomeAppear());
         //normalCatSpriteRenderer.color = new Color(1, 1, 1, 1);
     }
 

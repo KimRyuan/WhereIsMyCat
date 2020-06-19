@@ -93,7 +93,7 @@ public class GameManager : MonoBehaviour
         infoList.Add(new ChapterLevelCatsInfo(0, 0, "일반냥이코드저장용", false, 0,/*~*/ 9, 0, new List<int>()));     //일반냥이 코드를 저장하기 위한 곳임.
 
         //Chapter1
-        infoList.Add(new ChapterLevelCatsInfo(1, 1, "B의 방", true, 10,/*~*/ 19, 7, new List<int> {/*테스트용 일반냥이 소환*/ 0, 1, 2, 3, 4, 5, 6 }));
+        infoList.Add(new ChapterLevelCatsInfo(1, 1, "B의 방", true, 10,/*~*/ 19, 0, new List<int>()));
         infoList.Add(new ChapterLevelCatsInfo(1, 2, "2층 거실", false, 20,/*~*/ 30, 0, new List<int>()));
         infoList.Add(new ChapterLevelCatsInfo(1, 3, "옷방", false, 0,/*~*/ 0, 0, new List<int>()));
         infoList.Add(new ChapterLevelCatsInfo(1, 4, "2층 화장실", false, 0,/*~*/ 0, 0, new List<int>()));
