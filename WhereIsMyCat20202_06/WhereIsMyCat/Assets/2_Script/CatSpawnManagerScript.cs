@@ -6,7 +6,7 @@ public class CatSpawnManagerScript : MonoBehaviour
 {
     #region 현재 챕터와 레벨정보 및 
 
-    int nowChapter = 1; //나중에 씬 이동할 때 현재 챕터랑 레벨 불러올거임. (플레이어 프리펩이 줄거임!)
+    int nowChapter = 1;
     int nowLevel = 1;
     int catMaxCount = 30;
     
@@ -69,7 +69,7 @@ public class CatSpawnManagerScript : MonoBehaviour
             }
             //챕터끝남
 
-            //catSpawnTime만큼 기다림
+            //테스트로 1초에 하나씩 냥이를 스폰.
             yield return new WaitForSecondsRealtime(catSpawnTime);
         }
 

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1772394087}
   - component: {fileID: 1772394088}
   m_Layer: 0
-  m_Name: MouseIcon
+  m_Name: ArarmIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -69,8 +69,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 100
-  m_Sprite: {fileID: -4441900308924493142, guid: 633df60cbcaeca44c8ee967729350f4b,
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -1854172622137133299, guid: 633df60cbcaeca44c8ee967729350f4b,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -151,7 +151,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 101
+  m_SortingOrder: 20
   m_Sprite: {fileID: -1907654777556537598, guid: 633df60cbcaeca44c8ee967729350f4b,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -174,7 +174,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6898688703359489383}
   - component: {fileID: 6898688703359489381}
-  - component: {fileID: 1923922557}
   m_Layer: 0
   m_Name: MouseSpriteMask
   m_TagString: Untagged
@@ -212,18 +211,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 0}
---- !u!114 &1923922557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6898688703359489380}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5b446b49d9c89f48b621e11b1911236, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7730241440370296590
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,7 +223,7 @@ GameObject:
   - component: {fileID: 654909515719064679}
   - component: {fileID: 4326700072075170597}
   m_Layer: 0
-  m_Name: SpriteMaskImage
+  m_Name: TestWillBeDelete
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -294,10 +281,10 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 100
-  m_Sprite: {fileID: -4441900308924493142, guid: 633df60cbcaeca44c8ee967729350f4b,
+  m_SortingOrder: 20
+  m_Sprite: {fileID: -1854172622137133299, guid: 633df60cbcaeca44c8ee967729350f4b,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.19215687}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -346,7 +333,7 @@ SpriteMask:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -4441900308924493142, guid: 633df60cbcaeca44c8ee967729350f4b,
+  m_Sprite: {fileID: -1854172622137133299, guid: 633df60cbcaeca44c8ee967729350f4b,
     type: 3}
   m_MaskAlphaCutoff: 0.2
   m_FrontSortingLayerID: 0
