@@ -801,10 +801,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1772394088, guid: 4d40d03dcab4f7648acd646d0f1cffa7, type: 3}
+      propertyPath: m_SortingOrder
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 1923922557, guid: 4d40d03dcab4f7648acd646d0f1cffa7, type: 3}
       propertyPath: MouseIconSprite
       value: 
       objectReference: {fileID: 413645353}
+    - target: {fileID: 325115270952546827, guid: 4d40d03dcab4f7648acd646d0f1cffa7,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 101
+      objectReference: {fileID: 0}
+    - target: {fileID: 654909515719064679, guid: 4d40d03dcab4f7648acd646d0f1cffa7,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -4441900308924493142, guid: 633df60cbcaeca44c8ee967729350f4b,
+        type: 3}
+    - target: {fileID: 654909515719064679, guid: 4d40d03dcab4f7648acd646d0f1cffa7,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4326700072075170597, guid: 4d40d03dcab4f7648acd646d0f1cffa7,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -4441900308924493142, guid: 633df60cbcaeca44c8ee967729350f4b,
+        type: 3}
     - target: {fileID: 6898688703359489380, guid: 4d40d03dcab4f7648acd646d0f1cffa7,
         type: 3}
       propertyPath: m_Name
@@ -1484,6 +1510,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2100199058 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6898688703359489380, guid: 4d40d03dcab4f7648acd646d0f1cffa7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1243090284}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2100199061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100199058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5b446b49d9c89f48b621e11b1911236, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MouseIconSprite: {fileID: 413645353}
 --- !u!1001 &6359571374758627186
 PrefabInstance:
   m_ObjectHideFlags: 0
