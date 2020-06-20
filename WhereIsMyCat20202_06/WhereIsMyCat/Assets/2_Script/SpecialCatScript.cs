@@ -29,12 +29,16 @@ public class SpecialCatScript : MonoBehaviour
 
         //아틀라스 로드는 CatSpawnManagerScript에서 함.
         normalCatSpriteRenderer.sprite = SpriteSheetManager.GetSpriteByName("SpriteAtlas", "Cat_" + spawnCode);
+        //이미지에 맞춰서 콜라이더 리셋!
+        ResetCollider_ForCatObject();
+
         StartCoroutine(CatBecomeAppear());
         //normalCatSpriteRenderer.color = new Color(1, 1, 1, 1);
     }
 
-    void ClickNormalCatAndGet()
+    public void ClickSpecialCatAndGet()
     {
+        GetComponent<PolygonCollider2D>().enabled = false;
         if (nowClickProcessWorking == false)
         {
             nowClickProcessWorking = true;
@@ -57,7 +61,7 @@ public class SpecialCatScript : MonoBehaviour
 
     IEnumerator CatBecomeDisappear()
     {
-        if (isImageChanging == true)   //이미 바뀌는 중엔 바뀌면 안됨. 입력받고 기다리기.
+        if (isImageChanging == true)   //이미 바뀌는 중엔 바뀌면 안됨. 입력받고 기다리기. (나타나고 있는데 획득하면 꼬임;)
         {
             while (isImageChanging)
             {
@@ -73,7 +77,7 @@ public class SpecialCatScript : MonoBehaviour
             myColor = spriteRenderer.color;
             myColor = new Color(myColor.r, myColor.g, myColor.b, myColor.a - 0.05f);
             spriteRenderer.color = myColor;
-            yield return new WaitForSecondsRealtime(0.05f);
+            yield return new WaitForSecondsRealtime(0.02f);
         }
         isImageChanging = false;    //작업 끝남
         Destroy(this.gameObject);
@@ -100,5 +104,11 @@ public class SpecialCatScript : MonoBehaviour
             yield return new WaitForSecondsRealtime(0.05f);
         }
         isImageChanging = false;    //작업 끝남
+    }
+
+    void ResetCollider_ForCatObject()
+    {
+        Destroy(GetComponent<PolygonCollider2D>());
+        gameObject.AddComponent<PolygonCollider2D>();
     }
 }

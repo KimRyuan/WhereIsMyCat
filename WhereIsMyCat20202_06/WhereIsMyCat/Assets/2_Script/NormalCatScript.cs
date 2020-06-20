@@ -24,15 +24,19 @@ public class NormalCatScript : MonoBehaviour
 
         normalCatCode = spawnCode;
         SpriteRenderer normalCatSpriteRenderer = GetComponent<SpriteRenderer>();
-        
+
         //아틀라스 로드는 CatSpawnManagerScript에서 함.
         normalCatSpriteRenderer.sprite = SpriteSheetManager.GetSpriteByName("SpriteAtlas", "Cat_"+spawnCode);
+        //이미지에 맞춰서 콜라이더 리셋!
+        ResetCollider_ForCatObject();
+
         StartCoroutine(CatBecomeAppear());
         //normalCatSpriteRenderer.color = new Color(1, 1, 1, 1);
     }
 
-    void ClickNormalCatAndGet()
+    public void ClickNormalCatAndGet()
     {
+        GetComponent<PolygonCollider2D>().enabled = false;
         if (nowClickProcessWorking == false)
         {
             nowClickProcessWorking = true;
@@ -70,7 +74,7 @@ public class NormalCatScript : MonoBehaviour
             myColor = spriteRenderer.color;
             myColor = new Color(myColor.r, myColor.g, myColor.b, myColor.a - 0.05f);
             spriteRenderer.color = myColor;
-            yield return new WaitForSecondsRealtime(0.05f);
+            yield return new WaitForSecondsRealtime(0.02f);
         }
         isImageChanging = false;    //작업 끝남
         Destroy(this.gameObject);
@@ -97,5 +101,11 @@ public class NormalCatScript : MonoBehaviour
             yield return new WaitForSecondsRealtime(0.05f);
         }
         isImageChanging = false;    //작업 끝남
+    }
+    
+    void ResetCollider_ForCatObject()
+    {
+        Destroy(GetComponent<PolygonCollider2D>());
+        gameObject.AddComponent<PolygonCollider2D>();
     }
 }
