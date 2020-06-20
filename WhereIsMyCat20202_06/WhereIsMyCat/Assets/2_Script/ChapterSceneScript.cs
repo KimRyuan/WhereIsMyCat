@@ -17,6 +17,13 @@ public class ChapterSceneScript : MonoBehaviour
     public GameObject[] ChapterStageBtn;
     public Canvas CollectionCanvas;
 
+    int chapterIndex = 0;
+    private void Awake()
+    {
+        SpriteSheetManager.Load("UIAtlas");
+    }
+
+
     public void ChapterNextButton()
     {
         if (posisi < pos.Length - 1)
@@ -98,23 +105,33 @@ public class ChapterSceneScript : MonoBehaviour
     public void StageButtonSetting()
     {
         int btnCount = 0;
-        int chapterIndex = posisi + 1;
+
+        chapterIndex = posisi + 1;
 
         btnCount = GameManager.Instance.CatSpawnInfos_Dictionary[chapterIndex].Count;
-        chapterNameImage.sprite = SpriteSheetManager.GetSpriteByName("UIAtlas", "Chatper" + chapterIndex.ToString() + " _ThemeSelect0");
+        chapterNameImage.sprite = SpriteSheetManager.GetSpriteByName("UIAtlas", "Chatper" + chapterIndex.ToString() + "_ThemeSelect_0"); //Chatper1_ThemeSelect Chatper2_ThemeSelect
+
 
         for (int i = 0; i < ChapterStageBtn.Length; i++)
         {
             if (i < btnCount)
             {
                 ChapterStageBtn[i].SetActive(true);
-                ChapterStageBtn[i].transform.GetChild(1).GetComponent<Text>().text = GameManager.Instance.CatSpawnInfos_Dictionary[chapterIndex][i].levelName;
-                ChapterStageBtn[i].GetComponent<Image>().sprite = chapterNameImage.sprite = SpriteSheetManager.GetSpriteByName("UIAtlas", "Chatper" + chapterIndex.ToString() + "_Button_" + i);
+
+                ChapterStageBtn[i].transform.GetChild(1).GetComponent<Text>().text = GameManager.Instance.CatSpawnInfos_Dictionary[chapterIndex][i + 1].levelName;
+                ChapterStageBtn[i].GetComponent<Image>().sprite = SpriteSheetManager.GetSpriteByName("UIAtlas", "Chatper" + chapterIndex.ToString() + "_Button_" + i);
+
             }
             else
                 ChapterStageBtn[i].SetActive(false);
         }
     }
-    #endregion
 
+
+    public void LoadChapterLevel(int index)
+    {
+      
+    }
+
+    #endregion
 }

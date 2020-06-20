@@ -62,6 +62,21 @@ TextureImporter:
   - first:
       213: -2334711037347445360
     second: Chatper2_ThemeSelect_19
+  - first:
+      213: -5326646347950349407
+    second: Chatper2_ThemeSelect_0
+  - first:
+      213: 42328960898012547
+    second: Chatper2_Button_0
+  - first:
+      213: 6065026015870760699
+    second: Chatper2_Button_1
+  - first:
+      213: -9213951107845092052
+    second: Chatper2_Button_2
+  - first:
+      213: 2045186091192287863
+    second: Chatper2_Button_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -162,10 +177,10 @@ TextureImporter:
       name: Chatper2_ThemeSelect_0
       rect:
         serializedVersion: 2
-        x: 679
-        y: 896
-        width: 507
-        height: 157
+        x: 698
+        y: 919
+        width: 476
+        height: 125
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,8 +188,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e48b66e65785ad450800000000000000
-      internalID: 6114296705495513166
+      spriteID: 1a3a94a4e53f316b0800000000000000
+      internalID: -5326646347950349407
       vertices: []
       indices: 
       edges: []
@@ -329,7 +344,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 01be5b52c2da26b47b6e2a666f156c74
     internalID: 0
     vertices: []
     indices: 
