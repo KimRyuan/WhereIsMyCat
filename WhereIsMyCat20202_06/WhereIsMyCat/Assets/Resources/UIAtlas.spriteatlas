@@ -34,7 +34,7 @@ SpriteAtlas:
     - {fileID: 102900000, guid: 14f19db1d12c1364eb35f1d850a13cc7, type: 3}
     - {fileID: 102900000, guid: 784ca2bbd0d5fd2409cac509a0898880, type: 3}
     - {fileID: 102900000, guid: 5ae3e726cae273d42bd1bb8fddaa5ee1, type: 3}
-    totalSpriteSurfaceArea: 11443690
+    totalSpriteSurfaceArea: 12638049
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
@@ -71,6 +71,13 @@ SpriteAtlas:
   - {fileID: -1854172622137133299, guid: 633df60cbcaeca44c8ee967729350f4b, type: 3}
   - {fileID: 8119159365409263911, guid: 633df60cbcaeca44c8ee967729350f4b, type: 3}
   - {fileID: 21300000, guid: d7789e6c0d682cf4f91abb589036c91a, type: 3}
+  - {fileID: -9213951107845092052, guid: bcc9087c30a4fec4fbb52eb0897c5c74, type: 3}
+  - {fileID: 2045186091192287863, guid: bcc9087c30a4fec4fbb52eb0897c5c74, type: 3}
+  - {fileID: 42328960898012547, guid: bcc9087c30a4fec4fbb52eb0897c5c74, type: 3}
+  - {fileID: 6065026015870760699, guid: bcc9087c30a4fec4fbb52eb0897c5c74, type: 3}
+  - {fileID: -2606745244793730719, guid: bcc9087c30a4fec4fbb52eb0897c5c74, type: 3}
+  - {fileID: -2491639746256583228, guid: bcc9087c30a4fec4fbb52eb0897c5c74, type: 3}
+  - {fileID: 2219387899166322257, guid: bcc9087c30a4fec4fbb52eb0897c5c74, type: 3}
   - {fileID: 6114296705495513166, guid: bcc9087c30a4fec4fbb52eb0897c5c74, type: 3}
   - {fileID: 21300000, guid: ef7a687c7c966ba40bfc005ce50617dc, type: 3}
   - {fileID: 21300000, guid: 623b60dc02ae565459ad2f4a56beb86d, type: 3}
@@ -95,7 +102,20 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 1832159faea46074283ce07c0c07b72f, type: 3}
   - {fileID: 21300000, guid: b6497acf44a779a469118635cede8857, type: 3}
   - {fileID: 21300000, guid: 9bb292df1a7f3c74286f2cbc00fe6ba0, type: 3}
-  - {fileID: 2877471580529523173, guid: 2b7567ef7cd7cb646aff3579998c9758, type: 3}
+  - {fileID: -4910449105212404372, guid: 2b7567ef7cd7cb646aff3579998c9758, type: 3}
+  - {fileID: 4052820585331376215, guid: 2b7567ef7cd7cb646aff3579998c9758, type: 3}
+  - {fileID: 8873515624696890537, guid: 2b7567ef7cd7cb646aff3579998c9758, type: 3}
+  - {fileID: 7741711606087752702, guid: 2b7567ef7cd7cb646aff3579998c9758, type: 3}
+  - {fileID: 5078950419985337709, guid: 2b7567ef7cd7cb646aff3579998c9758, type: 3}
+  - {fileID: -1785167578867948631, guid: 2b7567ef7cd7cb646aff3579998c9758, type: 3}
+  - {fileID: -8736976069730228522, guid: 2b7567ef7cd7cb646aff3579998c9758, type: 3}
+  - {fileID: 6647208684727879219, guid: 2b7567ef7cd7cb646aff3579998c9758, type: 3}
+  - {fileID: 7552662187064490509, guid: 2b7567ef7cd7cb646aff3579998c9758, type: 3}
+  - {fileID: 7961374325155255996, guid: 2b7567ef7cd7cb646aff3579998c9758, type: 3}
+  - {fileID: -2379743803825476064, guid: 2b7567ef7cd7cb646aff3579998c9758, type: 3}
+  - {fileID: -8133017161781121944, guid: 2b7567ef7cd7cb646aff3579998c9758, type: 3}
+  - {fileID: 4254233157134255268, guid: 2b7567ef7cd7cb646aff3579998c9758, type: 3}
+  - {fileID: -700544123001800465, guid: 2b7567ef7cd7cb646aff3579998c9758, type: 3}
   m_PackedSpriteNamesToIndex:
   - Cat13
   - Cat15
@@ -130,6 +150,13 @@ SpriteAtlas:
   - Icon4
   - Icon5
   - Cat30
+  - Chatper2_Button_2
+  - Chatper2_Button_3
+  - Chatper2_Button_0
+  - Chatper2_Button_1
+  - Chatper2_ThemeSelect_3
+  - Chatper2_ThemeSelect_2
+  - Chatper2_ThemeSelect_1
   - Chatper2_ThemeSelect_0
   - ThemeSelectSceneSample
   - Cat12
@@ -154,6 +181,19 @@ SpriteAtlas:
   - Cat26
   - Cat9
   - Cat18
-  - 
+  - Chatper1_ThemeSelect_4
+  - Chatper1_ThemeSelect_5
+  - Chatper1_ThemeSelect_6
+  - Chatper1_ThemeSelect_7
+  - Chatper1_ThemeSelect_0
+  - Chatper1_ThemeSelect_1
+  - Chatper1_ThemeSelect_2
+  - Chatper1_ThemeSelect_3
+  - Chatper1_Button_5
+  - Chatper1_Button_4
+  - Chatper1_Button_3
+  - Chatper1_Button_2
+  - Chatper1_Button_1
+  - Chatper1_Button_0
   m_Tag: UIAtlas
   m_IsVariant: 0
